@@ -1,13 +1,21 @@
-package objetos;
-
 public class Pessoa {
     /* Atributos da classe */
     /*private deixa o modificador de acesso como privado!*/
-    private float peso;
-    private float altura;
+    public float peso;
+    public float altura;
+    public float setPeso;
+    public float setaltura;
 
     /* Método */
-    /* Nome do método 👇 */
+    /* Método construtor
+     *       👇*/
+    public Pessoa (float peso, float altura) {
+        /*O "this." acessa um atributo */
+        this.peso = peso;
+        this.altura = altura;
+    }
+
+    /* Método de acesso 👇 */
     public float calcularImc() {
         float imc = peso / (altura * altura);
         return imc;

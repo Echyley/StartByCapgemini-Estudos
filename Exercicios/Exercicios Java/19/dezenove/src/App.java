@@ -1,4 +1,4 @@
-package ExercicioDezenove;
+package dezenove;
 
 import java.util.Scanner;
 

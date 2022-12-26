@@ -1,5 +1,3 @@
-package ExercicioVinteEQuatro;
-
 import java.util.Scanner;
 
 public class App {

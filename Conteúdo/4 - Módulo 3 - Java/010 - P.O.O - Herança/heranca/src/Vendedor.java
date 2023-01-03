@@ -1,73 +1,47 @@
-import java.util.Date;
+/*"extends" vai atribuir valores de outro item (ou classe) para outra. */
+public class Vendedor extends Funcionario {
 
-public class Vendedor {
-    private String name;
-    private String cpf;
-    private Date dataNascimento;
-    private float salario;
-
+    private int totalItensVendidos;
+    private float comissaoPorItem;
+    
+/*Utilizamos "super()" quando queremos pegar um valor da classe superior, nesse caso o Vendedor quer pegar algo de Funcionario. */
     public Vendedor() {
+        super();
+    }
 
+    public float calcularSalario() {
+        return super.getSalario() + (this.comissaoPorItem * totalItensVendidos);
+     }
+     
+
+    /**
+     * @return int return the totalItensVendidos
+     */
+    public int getTotalItensVendidos() {
+        return totalItensVendidos;
     }
 
     /**
-     * @return String return the name
+     * @param totalItensVendidos the totalItensVendidos to set
      */
-    public String getName() {
-        return name;
+    public void setTotalItensVendidos(int totalItensVendidos) {
+        this.totalItensVendidos = totalItensVendidos;
     }
 
     /**
-     * @param name the name to set
+     * @return float return the comissaoPorItem
      */
-    public void setName(String name) {
-        this.name = name;
+    public float getComissaoPorItem() {
+        return comissaoPorItem;
     }
 
     /**
-     * @return String return the cpf
+     * @param comissaoPorItem the comissaoPorItem to set
      */
-    public String getCpf() {
-        return cpf;
-    }
-
-    /**
-     * @param cpf the cpf to set
-     */
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    /**
-     * @return Date return the dataNascimento
-     */
-    public Date getDataNascimento() {
-        return dataNascimento;
-    }
-
-    /**
-     * @param dataNascimento the dataNascimento to set
-     */
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    /**
-     * @return float return the salario
-     */
-    public float getSalario() {
-        return salario;
-    }
-
-    /**
-     * @param salario the salario to set
-     */
-    public void setSalario(float salario) {
-        this.salario = salario;
+    public void setComissaoPorItem(float comissaoPorItem) {
+        this.comissaoPorItem = comissaoPorItem;
     }
 
 }
 
-
-
-
+   
